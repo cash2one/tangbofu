@@ -1,0 +1,12 @@
+{% extends "main/_base.html" %}
+{% block page_content %}
+<h1>news list</h1>
+<ul>
+    {% for news in news_list %}
+    <li>
+        <h4><a href="/news_detail/{{news.id}}">{{news.title}}</a></h4>
+        <p>{{news.desc}}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

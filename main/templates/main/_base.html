@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tangbofu</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/bootstrap/css/bootstrap.min.css' %}"></link>
+    <link rel="stylesheet" href="{% static 'main/font-awesome/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}"></link>
+    {% block css %} {% endblock %}
+</head>
+<body>
+    <nav>{% include 'main/_nav.html' %}</nav>
+    
+    {% block page_content %}{% endblock %}    
+    
+    <footer>{% include 'main/_footer.html' %}</footer>
+
+{% block js %} {% endblock %}
+<script src="{% static 'main/js/jquery.min.js' %}"></script>
+<script src="{% static 'main/bootstrap/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'main/js/jquery.lazyload.min.js' %}"></script>
+<script>
+$(function(){
+
+})
+</script>
+</body>
+</html>
