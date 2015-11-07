@@ -1,4 +1,6 @@
 from django.conf.urls import url
+from django.conf.urls.static import static
+from tangbofu.settings import *
 from . import views
 urlpatterns = [
     url(r'^$', views.home, name='home'),
@@ -8,4 +10,4 @@ urlpatterns = [
     url(r'^contact_us/', views.contact_us, name="contact_us"),
     url(r'^about/', views.about, name="about"),
     url(r'^send_email/$', views.send_email, name="send_email"),
-]
+] + static(MEDIA_URL, document_root=MEDIA_ROOT)

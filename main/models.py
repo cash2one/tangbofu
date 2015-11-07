@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.utils import timezone
+from ckeditor_uploader.fields import RichTextUploadingField
 import datetime
 
 # Create your models here.
 class News(models.Model):
     title = models.CharField(max_length=50, default="标题")
     desc = models.CharField(max_length=255, default="描述")
-    content = models.TextField(default="正文")
+    content = RichTextUploadingField()
     created = models.DateTimeField()
     modified = models.DateTimeField()
 
