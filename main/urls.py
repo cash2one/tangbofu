@@ -10,4 +10,6 @@ urlpatterns = [
     url(r'^contact_us/', views.contact_us, name="contact_us"),
     url(r'^about/', views.about, name="about"),
     url(r'^send_email/$', views.send_email, name="send_email"),
-] + static(MEDIA_URL, document_root=MEDIA_ROOT)
+]
+if DEBUG:
+    urlpatterns = urlpatterns + static(MEDIA_URL, document_root=MEDIA_ROOT)
