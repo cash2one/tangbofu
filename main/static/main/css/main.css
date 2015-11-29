@@ -152,23 +152,48 @@ a {
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding: 15px;
-  min-height: 400px;
-  color: white; }
+  min-height: 400px; }
   .text-block .img-frame {
     margin-bottom: 20px;
-    display: flex; }
+    overflow: hidden; }
+  .text-block p {
+    padding: 15px;
+    color: white; }
   .text-block img {
     float: left;
     margin-left: auto;
     margin-right: auto;
-    max-width: 50%; }
+    max-width: 100%; }
 
+@media (max-width: 720px) {
+  .banner {
+    width: 100%;
+    border-bottom: 1px solid white; }
+    .banner img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%; }
+
+  .text-block {
+    width: 100%;
+    padding: 15px;
+    min-height: 600px;
+    color: white; }
+    .text-block .img-frame {
+      margin-bottom: 20px;
+      display: flex; }
+    .text-block img {
+      float: left;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%; } }
 footer .text-block {
   margin-top: 150px;
-  color: #666666;
   margin-left: 40%;
   font-size: 1.2em; }
+  footer .text-block p {
+    color: #666666; }
 
 .yangsheng {
   background: url(./../img/tile/yangsheng.png) repeat left top; }
