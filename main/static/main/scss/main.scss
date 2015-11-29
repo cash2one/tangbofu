@@ -152,7 +152,7 @@
    overflow: hidden;
 }
 .banner {
-    width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     img {
@@ -163,18 +163,39 @@
     }
     border-bottom: 1px solid white;
 }
+.banner.yingshi {
+    background: url(./../img/banner/bg_yingshi.png) repeat left top;
+}
+.banner.hongjiu {
+    background: url(./../img/banner/bg_hongjiu.png) repeat left top;
+}
+.banner.mote {
+    background: url(./../img/banner/bg_mote.png) repeat left top;
+}
+.banner.yangsheng {
+    background: url(./../img/banner/bg_yangsheng.png) repeat left top;
+}
+.banner.chenxiang {
+    background: url(./../img/banner/bg_chenxiang.png) repeat left top;
+}
 .text-block {
-    width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     min-height: 400px;
-    
+    padding-bottom: 2em;
     .img-frame {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 20px;
         overflow: hidden;
         //display: flex;
     }
     p {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
         padding: 15px;
         color: white;
     }
@@ -189,15 +210,16 @@ footer .text-block {
     padding-top: 150px;
     padding-bottom: 50px;
     p {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
         color: #666666;
+        padding-left: 20%;
     }
-    
-    padding-left: 20%;
     font-size: 1.2em;
 }
 @media (max-width:720px) {
     .banner {
-        max-width: 100%;
         img {
             display: block;
             margin-left: auto;
@@ -207,12 +229,15 @@ footer .text-block {
         border-bottom: 1px solid white;
     }
     .text-block {
-        max-width: 100%;
         padding: 0;
         min-height: 600px;
         color: white;
         .img-frame {
+            max-width: 100%;
             margin-bottom: 20px;
+        }
+        p {
+            max-width: 100%;
         }
         img {
             float: left;
