@@ -15,6 +15,9 @@ a {
   list-style-type: none;
   text-decoration: none; }
 
+h4 {
+  text-align: center; }
+
 .fullscreen {
   position: relative;
   width: 100%;
@@ -27,6 +30,124 @@ a {
 .fix {
   position: fixed;
   top: 0px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Hiragino Sans GB', 'STHeiti', 'Microsoft Yahei', sans-serif !important; }
+
+ul, li {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style-type: none; }
+
+a {
+  list-style-type: none;
+  text-decoration: none; }
+
+h4 {
+  text-align: center; }
+
+.fullscreen {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.centered {
+  margin-left: auto;
+  margin-right: auto; }
+
+.fix {
+  position: fixed;
+  top: 0px; }
+
+.band {
+  height: 0;
+  width: 50px;
+  position: absolute;
+  top: 25px; }
+
+.red {
+  color: #C1272D; }
+
+.red.band {
+  border: 3px solid #C1272D; }
+
+.purple {
+  color: #4b1040; }
+
+.purple.band {
+  border: 3px solid #4b1040; }
+
+.yellow {
+  color: #b5a82f; }
+
+.yellow.band {
+  border: 3px solid #b5a82f; }
+
+.blue {
+  color: #223e71; }
+
+.blue.band {
+  border: 3px solid #223e71; }
+
+.green {
+  color: #6c6c4b; }
+
+.green.band {
+  border: 3px solid #6c6c4b; }
+
+.band.left {
+  left: 50%;
+  margin-left: -130px; }
+
+.band.right {
+  right: 50%;
+  margin-right: -130px; }
+
+.banner {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid white; }
+  .banner img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; }
+
+.banner.yingshi {
+  background: url(./../img/banner/bg_yingshi.png) repeat left top; }
+
+.banner.hongjiu {
+  background: url(./../img/banner/bg_hongjiu.png) repeat left top; }
+
+.banner.mote {
+  background: url(./../img/banner/bg_mote.png) repeat left top; }
+
+.banner.yangsheng {
+  background: url(./../img/banner/bg_yangsheng.png) repeat left top; }
+
+.banner.chenxiang {
+  background: url(./../img/banner/bg_chenxiang.png) repeat left top; }
+
+.yangsheng {
+  background: url(./../img/tile/yangsheng.png) repeat left top; }
+
+.yingshi {
+  background: url(./../img/tile/yingshi.png) repeat left top; }
+
+.hongjiu {
+  background: url(./../img/tile/hongjiu.png) repeat left top; }
+
+.chenxiang {
+  background: url(./../img/tile/chenxiang.png) repeat left top; }
+
+.mote {
+  background: url(./../img/tile/mote.png) repeat left top; }
 
 #homepage-banner {
   width: 100%; }
@@ -101,37 +222,6 @@ a {
     text-align: center;
     font-size: 2em;
     font-weight: bolder; }
-  .title .band {
-    height: 0;
-    width: 50px;
-    position: absolute;
-    top: 25px; }
-  .title .red {
-    color: #C1272D; }
-  .title .red.band {
-    border: 3px solid #C1272D; }
-  .title .purple {
-    color: #4b1040; }
-  .title .purple.band {
-    border: 3px solid #4b1040; }
-  .title .yellow {
-    color: #b5a82f; }
-  .title .yellow.band {
-    border: 3px solid #b5a82f; }
-  .title .blue {
-    color: #223e71; }
-  .title .blue.band {
-    border: 3px solid #223e71; }
-  .title .green {
-    color: #6c6c4b; }
-  .title .green.band {
-    border: 3px solid #6c6c4b; }
-  .title .band.left {
-    left: 50%;
-    margin-left: -130px; }
-  .title .band.right {
-    right: 50%;
-    margin-right: -130px; }
   .title p {
     position: absolute;
     width: 100%;
@@ -142,31 +232,14 @@ a {
 .page {
   overflow: hidden; }
 
-.banner {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom: 1px solid white; }
-  .banner img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%; }
+span.big {
+  font-size: 3em; }
 
-.banner.yingshi {
-  background: url(./../img/banner/bg_yingshi.png) repeat left top; }
+.indent {
+  padding-left: 5em; }
 
-.banner.hongjiu {
-  background: url(./../img/banner/bg_hongjiu.png) repeat left top; }
-
-.banner.mote {
-  background: url(./../img/banner/bg_mote.png) repeat left top; }
-
-.banner.yangsheng {
-  background: url(./../img/banner/bg_yangsheng.png) repeat left top; }
-
-.banner.chenxiang {
-  background: url(./../img/banner/bg_chenxiang.png) repeat left top; }
+.indent2 {
+  padding-left: 10em; }
 
 .text-block {
   max-width: 100%;
@@ -192,26 +265,7 @@ a {
     margin-right: auto;
     max-width: 100%; }
 
-footer .text-block {
-  padding-top: 150px;
-  padding-bottom: 50px;
-  font-size: 1.2em; }
-  footer .text-block p {
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #666666;
-    padding-left: 20%; }
-
 @media (max-width: 720px) {
-  .banner {
-    border-bottom: 1px solid white; }
-    .banner img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 100%; }
-
   .text-block {
     padding: 0;
     min-height: 600px;
@@ -225,30 +279,28 @@ footer .text-block {
       float: left;
       margin-left: auto;
       margin-right: auto;
-      max-width: 100%; }
+      max-width: 100%; } }
+i {
+  margin-right: 0.5em; }
 
-  footer .text-block {
-    padding-top: 50px;
-    padding-bottom: 0;
-    min-height: 500px;
-    padding-left: 20%;
-    font-size: 1em; }
-    footer .text-block p {
-      padding: 0px;
-      color: #666666; } }
-.yangsheng {
-  background: url(./../img/tile/yangsheng.png) repeat left top; }
+footer {
+  width: 400px;
+  min-height: 500px;
+  padding-bottom: 2em;
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto; }
+  footer h4 {
+    margin-top: 2em;
+    font-weight: bold; }
+  footer p {
+    color: #666666;
+    padding: 1em 10%; }
+  footer li {
+    margin-left: 2em;
+    line-height: 2em; }
 
-.yingshi {
-  background: url(./../img/tile/yingshi.png) repeat left top; }
-
-.hongjiu {
-  background: url(./../img/tile/hongjiu.png) repeat left top; }
-
-.chenxiang {
-  background: url(./../img/tile/chenxiang.png) repeat left top; }
-
-.mote {
-  background: url(./../img/tile/mote.png) repeat left top; }
+.contact {
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
