@@ -39,8 +39,13 @@ a {
   #homepage-banner img {
     position: absolute;
     z-index: 100;
-    max-width: 100%; }
+    max-width: 100%;
+    right: 10%;
+    bottom: 10%; }
 
+@media (max-width: 720px) {
+  #homepage-banner img {
+    right: 0; } }
 #menu {
   width: 100%;
   border-radius: 0px;
@@ -165,9 +170,17 @@ a {
     margin-right: auto;
     max-width: 100%; }
 
+footer .text-block {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  padding-left: 20%;
+  font-size: 1.2em; }
+  footer .text-block p {
+    color: #666666; }
+
 @media (max-width: 720px) {
   .banner {
-    width: 100%;
+    max-width: 100%;
     border-bottom: 1px solid white; }
     .banner img {
       display: block;
@@ -176,25 +189,27 @@ a {
       max-width: 100%; }
 
   .text-block {
-    width: 100%;
-    padding: 15px;
+    max-width: 100%;
+    padding: 0;
     min-height: 600px;
     color: white; }
     .text-block .img-frame {
-      margin-bottom: 20px;
-      display: flex; }
+      margin-bottom: 20px; }
     .text-block img {
       float: left;
       margin-left: auto;
       margin-right: auto;
-      max-width: 100%; } }
-footer .text-block {
-  margin-top: 150px;
-  margin-left: 40%;
-  font-size: 1.2em; }
-  footer .text-block p {
-    color: #666666; }
+      max-width: 100%; }
 
+  footer .text-block {
+    padding-top: 50px;
+    padding-bottom: 0;
+    min-height: 500px;
+    padding-left: 20%;
+    font-size: 1em; }
+    footer .text-block p {
+      padding: 0px;
+      color: #666666; } }
 .yangsheng {
   background: url(./../img/tile/yangsheng.png) repeat left top; }
 
