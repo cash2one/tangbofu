@@ -2,7 +2,18 @@ body {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,"Hiragino Sans GB","Segoe UI",Tahoma,Arial,STHeiti,sans-serif !important; }
+  font-family: 'Hiragino Sans GB', 'STHeiti', 'Microsoft Yahei', sans-serif !important; }
+
+ul, li {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style-type: none; }
+
+a {
+  list-style-type: none;
+  text-decoration: none; }
 
 .fullscreen {
   position: relative;
@@ -10,9 +21,160 @@ body {
   height: 100%; }
 
 .centered {
-  margin: 0 auto; }
+  margin-left: auto;
+  margin-right: auto; }
 
-body {
-  background-color: #cccccc; }
+.fix {
+  position: fixed;
+  top: 0px; }
+
+#homepage-banner {
+  width: 100%; }
+  #homepage-banner .carousel-item {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: white; }
+  #homepage-banner img {
+    position: absolute;
+    z-index: 100;
+    max-width: 100%; }
+
+#menu {
+  width: 100%;
+  border-radius: 0px;
+  z-index: 100;
+  background-color: white;
+  padding: 0; }
+  #menu .nav-pills, #menu .nav-link {
+    border-radius: 0; }
+  #menu ul li.nav-item {
+    width: 20%;
+    line-height: 2em;
+    display: inline-block;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    -webkit-box-sizing: border-box;
+    /* Safari */
+    text-align: center; }
+  #menu .nav-link {
+    color: #666666;
+    position: relative; }
+    #menu .nav-link.active {
+      background-color: #C1272D;
+      color: white; }
+    #menu .nav-link:after {
+      position: absolute;
+      right: 1px;
+      content: '|';
+      width: 1px;
+      color: silver; }
+  #menu li:last-child .nav-link:after {
+    content: ''; }
+
+.title {
+  margin-top: 40px;
+  position: relative;
+  height: 100px; }
+  .title img {
+    display: block;
+    margin: 0 auto;
+    z-index: 10;
+    width: 256px;
+    position: absolute;
+    left: 50%;
+    margin-left: -128px; }
+  .title h4 {
+    margin: 0 auto;
+    z-index: 10;
+    width: 256px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder; }
+  .title .band {
+    height: 0;
+    width: 50px;
+    position: absolute;
+    top: 25px; }
+  .title .red {
+    color: #C1272D; }
+  .title .red.band {
+    border: 3px solid #C1272D; }
+  .title .purple {
+    color: #4b1040; }
+  .title .purple.band {
+    border: 3px solid #4b1040; }
+  .title .yellow {
+    color: #b5a82f; }
+  .title .yellow.band {
+    border: 3px solid #b5a82f; }
+  .title .blue {
+    color: #223e71; }
+  .title .blue.band {
+    border: 3px solid #223e71; }
+  .title .green {
+    color: #6c6c4b; }
+  .title .green.band {
+    border: 3px solid #6c6c4b; }
+  .title .band.left {
+    left: 50%;
+    margin-left: -130px; }
+  .title .band.right {
+    right: 50%;
+    margin-right: -130px; }
+  .title p {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    text-align: center;
+    letter-spacing: 4px; }
+
+.page {
+  overflow: hidden; }
+
+.banner {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid white; }
+  .banner img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; }
+
+.text-block {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  min-height: 400px; }
+  .text-block img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    box-shadow: 0 0 2px gray;
+    border: 3px solid white; }
+
+.yangsheng {
+  background: url(./../img/tile/yangsheng.png) repeat left top; }
+
+.yingshi {
+  background: url(./../img/tile/yingshi.png) repeat left top; }
+
+.hongjiu {
+  background: url(./../img/tile/hongjiu.png) repeat left top; }
+
+.chenxiang {
+  background: url(./../img/tile/chenxiang.png) repeat left top; }
+
+.mote {
+  background: url(./../img/tile/mote.png) repeat left top; }
 
 /*# sourceMappingURL=main.css.map */

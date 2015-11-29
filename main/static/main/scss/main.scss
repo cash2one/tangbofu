@@ -1,8 +1,186 @@
 @charset "utf-8";
 @import "common";
 
-body {
-    background-color: #cc0000;
+
+.fix {
+    position: fixed;
+    top: 0px;
 }
+#homepage-banner {
+    width: 100%;
+    
+    .carousel-item {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-color: white;
+    }
 
-
+    img {
+        position: absolute;
+        z-index: 100;
+        max-width: 100%;
+    }
+}
+#menu {
+    width: 100%;
+    border-radius: 0px;
+    z-index: 100;
+    background-color: white;
+    padding: 0;
+    .nav-pills, .nav-link {
+        border-radius: 0;
+    }
+    ul li.nav-item {
+        width: 20%;
+        line-height: 2em;
+        display: inline-block;
+        margin: 0;
+        box-sizing:border-box;
+        -moz-box-sizing:border-box; /* Firefox */
+        -webkit-box-sizing:border-box; /* Safari */
+        text-align: center;
+    }
+    
+    .nav-link {
+        color: #666666;
+        position: relative;
+        &.active {
+            background-color: $red;
+            color: white;
+        }
+        &:after {
+            position: absolute;
+            right: 1px;
+            content: '|';
+            width: 1px;
+            color: silver;
+        }
+    }
+    li:last-child .nav-link{
+        &:after {
+            content: '';
+        }
+    }
+}
+.title {
+    margin-top: 40px;
+    position: relative;
+    height: 100px;
+    img {
+        display: block;
+        margin: 0 auto;
+        z-index: 10;
+        width: 256px;
+        position: absolute;
+        left: 50%;
+        margin-left: -128px;
+    }
+    h4 {
+        margin: 0 auto;
+        z-index: 10;
+        width: 256px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bolder;
+    }
+    .band {
+        height: 0;
+        width: 50px;
+        position: absolute;
+        top: 25px;
+    }
+    .red {
+        color: $red;
+    }
+    .red.band {
+        border: 3px solid $red;
+    }
+    .purple {
+        color: $purple;
+    }
+    .purple.band {
+        border: 3px solid $purple;
+    }
+    .yellow {
+        color: $yellow;
+    }
+    .yellow.band {
+        border: 3px solid $yellow;
+    }
+    .blue {
+        color: $blue;
+    }
+    .blue.band {
+        border: 3px solid $blue;
+    }
+    .green {
+        color: $green;
+    }
+    .green.band {
+        border: 3px solid $green;
+    }
+    .band.left {
+        left: 50%;
+        margin-left: -130px;
+    }
+    .band.right {
+        right: 50%;
+        margin-right: -130px;
+    }
+    p {
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        text-align: center;
+        letter-spacing: 4px;
+    }
+}
+.page {
+   overflow: hidden;
+}
+.banner {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+    border-bottom: 1px solid white;
+}
+.text-block {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    min-height: 400px;
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        box-shadow: 0 0 2px gray;
+        border: 3px solid white;
+    }
+}
+.yangsheng {
+    background: url(./../img/tile/yangsheng.png) repeat left top;
+}
+.yingshi {
+    background: url(./../img/tile/yingshi.png) repeat left top;
+}
+.hongjiu {
+    background: url(./../img/tile/hongjiu.png) repeat left top;
+}
+.chenxiang {
+    background: url(./../img/tile/chenxiang.png) repeat left top;
+}
+.mote {
+    background: url(./../img/tile/mote.png) repeat left top;
+}

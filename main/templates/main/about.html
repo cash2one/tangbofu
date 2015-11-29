@@ -1,4 +1,16 @@
 {% extends "main/_base.html" %}
+{% load staticfiles %}
 {% block page_content %}
-<h1>about page</h1>
+<div class="banner">
+    <img src="{% static 'main/img/banner/chenxiang.png' %}" alt="">
+</div>
+<div class="yellow body">
+    红酒老牛逼了
+</div>
+{% endblock%}
+
+{% block js %}
+<script>
+$(".body").height($(window).height()-$("nav").height()-$(".banner").height());
+</script>
 {% endblock%}

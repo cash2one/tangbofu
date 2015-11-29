@@ -1,29 +1,24 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width:device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>tangbofu</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'main/bootstrap/css/bootstrap.min.css' %}"></link>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/bootstrap-v4/css/bootstrap.min.css' %}"></link>
     <link rel="stylesheet" href="{% static 'main/font-awesome/css/font-awesome.min.css'%}">
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}"></link>
     {% block css %} {% endblock %}
 </head>
-<body>
-    <nav>{% include 'main/_nav.html' %}</nav>
+<body data-spy="scroll" data-target="#menu">
     
-    {% block page_content %}{% endblock %}    
-    
-    <footer>{% include 'main/_footer.html' %}</footer>
+{% block page_content %}{% endblock %}    
 
-{% block js %} {% endblock %}
 <script src="{% static 'main/js/jquery.min.js' %}"></script>
-<script src="{% static 'main/bootstrap/bootstrap.min.js' %}"></script>
+<script src="{% static 'main/tether/js/tether.min.js' %}"></script>
+<script src="{% static 'main/bootstrap-v4/js/bootstrap.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'main/js/jquery.lazyload.min.js' %}"></script>
-<script>
-$(function(){
-
-})
-</script>
+{% block js %} {% endblock %}
 </body>
 </html>

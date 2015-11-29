@@ -1,4 +1,129 @@
 {% extends "main/_base.html" %}
+{% load staticfiles %}
 {% block page_content %}
-<h1>Welcome..～～. <br>This is tangbofu home...</h1>
+
+<div id="homepage-banner" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item  active" style="background-image: url({% static 'main/img/bkg_01.jpg' %});"></div>
+    <div class="carousel-item" style="background-image: url({% static 'main/img/bkg_02.jpg' %});"></div>
+    <div class="carousel-item" style="background-image: url({% static 'main/img/bkg_03.jpg' %});"></div>
+    <div class="carousel-item" style="background-image: url({% static 'main/img/bkg_04.jpg' %});"></div>
+  </div>
+  <img style="position: absolute; bottom: 50px;" src="{% static 'main/img/wide_title.png' %}" alt="">
+  <img style="position: absolute; bottom: 20px;" src="{% static 'main/img/wide_subtitle.png' %}" alt="">
+</div>
+<nav id="menu" class="navbar navbar-default" role="navigation">
+    <ul class="nav nav-pills" role="tablist">
+        <li class="nav-item"><a class="nav-link" href="#yingshi">影视</a></li>
+        <li class="nav-item"><a class="nav-link" href="#hongjiu">红酒</a></li>
+        <li class="nav-item"><a class="nav-link" href="#yangsheng">养生</a></li>
+        <li class="nav-item"><a class="nav-link" href="#chenxiang">沉香</a></li>
+        <li class="nav-item"><a class="nav-link" href="#mote">模特</a></li>
+    </ul>
+</nav>
+<!-- <div class="title">
+    <img src="{% static 'main/img/tangbofu_title.png'%}" alt="">    
+    <div class="band left red"></div>
+    <div class="band right red"></div>
+    <p>京城高端私人会所</p>
+</div> -->
+<div class="page" id="yingshi">
+    <div class="title">
+        <img src="{% static 'main/img/tangbofu_title.png'%}" alt="">
+        <div class="band left blue"></div>
+        <div class="band right blue"></div>
+        <p class="blue">京城高端私人会所 —— <b>影视</b></p>
+    </div>
+    <div class="banner">
+        <img src="{% static 'main/img/banner/yingshi.png'%}" alt="">
+    </div>
+    <div class="text-block yingshi">
+        <img src="{% static 'main/img/module/yingshi1.jpg'%}" alt="">
+    </div>
+</div>
+<div class="page" id="hongjiu">
+    <div class="title">
+        <img src="{% static 'main/img/tangbofu_title.png'%}" alt="">
+        <div class="band left purple"></div>
+        <div class="band right purple"></div>
+        <p class="purple">京城高端私人会所 —— <b>红酒</b></p>
+    </div>
+    <div class="banner">
+        <img src="{% static 'main/img/banner/hongjiu.png'%}" alt="">
+    </div>
+    <div class="text-block hongjiu">
+        <img src="{% static 'main/img/module/hongjiu1.jpg'%}" alt="">
+    </div>
+</div>
+<div class="page" id="yangsheng">
+    <div class="title">
+        <img src="{% static 'main/img/tangbofu_title.png'%}" alt="">
+        <div class="band left yellow"></div>
+        <div class="band right yellow"></div>
+        <p class="yellow">京城高端私人会所 —— <b>养生</b></p>
+    </div>
+    <div class="banner">
+        <img src="{% static 'main/img/banner/yangsheng.png'%}" alt="">
+    </div>
+    <div class="text-block yangsheng">
+        <img src="{% static 'main/img/module/yangsheng1.jpg'%}" alt="">
+    </div>
+</div>
+<div class="page" id="chenxiang">
+    <div class="title">
+        <img src="{% static 'main/img/tangbofu_title.png'%}" alt="">
+        <div class="band left green"></div>
+        <div class="band right green"></div>
+        <p class="green">京城高端私人会所 —— <b>沉香</b></p>
+    </div>
+    <div class="banner center">
+        <img src="{% static 'main/img/banner/chenxiang.png'%}" alt="">
+    </div>
+    <div class="text-block chenxiang center">
+        <img src="{% static 'main/img/module/chenxiang1.jpg'%}" alt="">
+    </div>
+</div>
+<div class="page" id="mote">
+    <div class="title">
+        <img src="{% static 'main/img/tangbofu_title.png'%}" alt="">
+        <div class="band left red"></div>
+        <div class="band right red"></div>
+        <p class="red">京城高端私人会所 —— <b>模特</b></p>
+    </div>
+    <div class="banner">
+        <img src="{% static 'main/img/banner/mote.png'%}" alt="">
+    </div>
+    <div class="text-block mote">
+        <img src="{% static 'main/img/module/mote1.jpg'%}" alt="">
+    </div>
+</div>
+{% include 'main/_footer.html' %}
+{% endblock%}
+
+{% block js %}
+<script>
+$('.carousel').carousel({
+    interval: 3000,
+    wrap: true
+});
+function resize() {
+    $("body").height($(window).height());
+    $("#homepage-banner .carousel-inner").height($("body").height());
+
+    
+}
+$(function(){
+    resize();
+    setInterval(resize,500);
+});
+function bodyScroll() {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop >= $('#homepage-banner').offset().top+$('#homepage-banner').height()) {
+        $('#menu').addClass('fix');
+    } else {
+        $('#menu').removeClass('fix');
+    }
+}
+$(window).scroll(bodyScroll);
+</script>
 {% endblock%}
