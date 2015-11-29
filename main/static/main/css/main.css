@@ -232,15 +232,15 @@ h4 {
 .page {
   overflow: hidden; }
 
-span.big {
-  font-size: 3em; }
+@media (min-width: 721px) {
+  span.big {
+    font-size: 3em; }
 
-.indent {
-  padding-left: 5em; }
+  .indent {
+    padding-left: 5em; }
 
-.indent2 {
-  padding-left: 10em; }
-
+  .indent2 {
+    padding-left: 10em; } }
 .text-block {
   max-width: 100%;
   margin-left: auto;
@@ -300,6 +300,9 @@ footer {
     margin-left: 2em;
     line-height: 2em; }
 
+@media (max-width: 720px) {
+  footer {
+    width: 100%; } }
 .contact {
   text-align: center; }
 
