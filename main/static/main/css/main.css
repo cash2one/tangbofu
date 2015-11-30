@@ -233,7 +233,7 @@ h4 {
 
 @media (min-width: 721px) {
   span.big {
-    font-size: 3em; }
+    font-size: 2em; }
 
   .indent {
     padding-left: 5em; }
@@ -257,7 +257,8 @@ h4 {
     margin-left: auto;
     margin-right: auto;
     padding: 15px;
-    color: white; }
+    color: white;
+    font-size: 18px; }
   .text-block img {
     float: left;
     margin-left: auto;
