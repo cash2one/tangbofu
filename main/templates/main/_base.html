@@ -6,20 +6,21 @@
     <meta name="viewport" content="width:device-width,initial-scale=1.0,user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>tangbofu</title>
-    <link rel="stylesheet" href="{% static 'main/bootstrap-v4/css/bootstrap.min.css' %}"></link>
+    <!-- <link rel="stylesheet" href="{% static 'main/bootstrap-v4/css/bootstrap.min.css' %}"></link>
     <link rel="stylesheet" href="{% static 'main/font-awesome/css/font-awesome.min.css'%}">
-    <link rel="stylesheet" href="{% static 'main/css/main.css' %}"></link>
-    <link rel="stylesheet" href="{% static 'main/font-awesome/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}"></link> -->
+    <link rel="stylesheet" href="{% static 'main/css/tangbofu.css' %}"></link>
     {% block css %} {% endblock %}
 </head>
 <body data-spy="scroll" data-target="#menu">
     
 {% block page_content %}{% endblock %}    
 
-<script src="{% static 'main/js/jquery.min.js' %}"></script>
+<!-- <script src="{% static 'main/js/jquery.min.js' %}"></script>
 <script src="{% static 'main/tether/js/tether.min.js' %}"></script>
 <script src="{% static 'main/bootstrap-v4/js/bootstrap.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'main/js/jquery.lazyload.min.js' %}"></script>
+<script src="{% static 'main/js/jquery.lazyload.min.js' %}"></script> -->
+<script src="{% static 'main/build/tangbofu.js' %}"></script>
 {% block js %} {% endblock %}
 </body>
 </html>

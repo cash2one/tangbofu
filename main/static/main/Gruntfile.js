@@ -14,8 +14,8 @@ module.exports = function(grunt) {
             basePath: './',
             cssSrcPath: 'scss/',
             cssDeployPath: 'css/',
-            srcPath: 'js/',
-            deployPath: 'build/',
+            JsDir: 'js/',
+            DepDir: 'build/',
         },
         jshint: {
             files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
@@ -29,13 +29,22 @@ module.exports = function(grunt) {
             options: {
                 stripBanners: true
             },
-            test: {
-                src: ['<%= meta.srcPath %>/a.js', '<%= meta.srcPath %>/b.js'],
-                dest: 'build/<%= pkg.name %>.js'
-            },
             dist: {
-                src: ['js/jquery.min.js', 'js/jquery.lazyload.min.js', 'js/jquery.cookie.js', 'js/smoothscroll.js', 'bootstrap/bootstrap.min.js'],
-                dest: 'build/<%= pkg.name %>.js'
+                src: [
+                    '<%= meta.JsDir %>/jquery.min.js', 
+                    '<%= meta.JsDir %>/jquery.lazyload.min.js',
+                    'tether/js/tether.min.js',
+                    'bootstrap-v4/js/bootstrap.min.js'
+                ],
+                dest: '<%= meta.DepDir %>/<%= pkg.name %>.js'
+            },
+            distcss: {
+                src: [
+                    'bootstrap-v4/css/bootstrap.min.css', 
+                    'font-awesome/css/font-awesome.min.css',
+                    'css/main.css'
+                ],
+                dest: 'css/<%= pkg.name %>.css'
             }
         },
         uglify: {
@@ -88,5 +97,6 @@ module.exports = function(grunt) {
     // 非默认的任务,我们需要输入 grunt compress 命令来执行这条 task，
     //grunt.registerTask('compress', ['uglify:build']); 
     grunt.registerTask('css', ['watch:css']);
-    grunt.registerTask('default', ['concat:dist', 'uglify:build']);
+    //grunt.registerTask('default', ['concat:dist', 'uglify:build']);
+    grunt.registerTask('default', ['concat:dist', 'concat:distcss']);
 };
