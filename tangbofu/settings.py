@@ -4,7 +4,7 @@ from tangbofu.secret import *
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = SECRET['SECRET_KEY']
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
