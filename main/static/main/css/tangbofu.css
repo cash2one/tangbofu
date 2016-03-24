@@ -169,6 +169,12 @@ h4 {
   position: relative;
   height: 100%; }
 
+.end-area {
+  width: 600px;
+  height: 70px;
+  position: absolute;
+  bottom: 0; }
+
 .notice {
   color: #666;
   text-align: center;

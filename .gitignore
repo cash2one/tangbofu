@@ -7,3 +7,4 @@ tangbofu/secret.py
 main/static/main/bower_components/
 
 .idea/
+*.sh
