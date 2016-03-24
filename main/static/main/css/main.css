@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -148,6 +149,110 @@ h4 {
 .mote {
   background: url(./../img/tile/mote.png) repeat left top; }
 
+.news-bg {
+  background-color: #f8f8f8; }
+
+.text-area {
+  width: 600px;
+  padding-bottom: 2em;
+  position: relative;
+  height: 100%; }
+
+.notice {
+  color: #666;
+  text-align: center;
+  font-size: 18px;
+  margin: 2em;
+  height: 300px; }
+
+span.date {
+  font-size: 12px;
+  color: #999;
+  margin-left: 10px;
+  display: inline; }
+
+.news-block {
+  max-width: 80%;
+  min-width: 600px;
+  margin-left: 10%;
+  margin-right: 10%;
+  min-height: 400px;
+  position: relative;
+  border: 1px solid #CCCCCC;
+  background-color: white; }
+  .news-block ul {
+    margin-bottom: 60px;
+    margin-left: 30px; }
+  .news-block li {
+    border-bottom: 1px solid #CCCCCC;
+    margin-top: 1em;
+    padding-bottom: 1em; }
+    .news-block li .list-title {
+      overflow: hidden;
+      word-break: break-all;
+      line-height: 22px;
+      margin-top: 20px; }
+    .news-block li h3 a {
+      font-size: 18px;
+      text-decoration: none;
+      color: #333333;
+      display: inline; }
+    .news-block li h3 a:hover {
+      color: #f95346; }
+    .news-block li .desc-text > a {
+      font-size: 14px;
+      color: #999;
+      text-decoration: none; }
+  .news-block li:last-child {
+    border-bottom: 0; }
+
+.right {
+  display: inline;
+  float: right; }
+
+.article {
+  padding: 2em 4em; }
+  .article h3 {
+    text-align: center;
+    font-size: 2em;
+    margin: 2em 0; }
+
+#page-list {
+  position: absolute;
+  left: 240px;
+  right: 0px;
+  bottom: 2em;
+  background-color: white;
+  text-align: right;
+  padding: 1em;
+  font-size: 0.8em;
+  border-top: 1px solid #c1c2c6;
+  border-bottom: 1px solid #c1c2c6; }
+
+#page-list span {
+  padding: 0px 10px;
+  margin: 0px; }
+
+#page-list a {
+  color: #a1865d;
+  /*棕褐色*/
+  text-decoration: underline; }
+
+.bottom-bar {
+  position: relative;
+  background-color: white;
+  text-align: right;
+  padding: 1em;
+  overflow: hidden;
+  font-size: 0.8em;
+  border-top: 1px solid #c1c2c6;
+  border-bottom: 1px solid #c1c2c6; }
+  .bottom-bar a {
+    float: right;
+    color: #a1865d;
+    /*棕褐色*/
+    text-decoration: underline; }
+
 #homepage-banner {
   width: 100%; }
   #homepage-banner .carousel-item {
@@ -175,7 +280,7 @@ h4 {
   #menu .nav-pills, #menu .nav-link {
     border-radius: 0; }
   #menu ul li.nav-item {
-    width: 16%;
+    width: 14%;
     line-height: 2em;
     display: inline-block;
     margin: 0;
@@ -186,7 +291,7 @@ h4 {
     /* Safari */
     text-align: center; }
   #menu ul li.nav-item:last-child {
-    width: 20%; }
+    width: 16%; }
   #menu .nav-link {
     color: #666666;
     position: relative; }

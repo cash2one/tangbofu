@@ -1,12 +1,86 @@
 {% extends "main/_base.html" %}
+{% load staticfiles %}
 {% block page_content %}
-<h1>news list</h1>
-<ul>
-    {% for news in news_list %}
-    <li>
-        <h4><a href="/news_detail/{{news.id}}">{{news.title}}</a></h4>
-        <p>{{news.desc}}</p>
-    </li>
-    {% endfor %}
-</ul>
-{% endblock %}
+
+<nav id="menu" class="navbar navbar-default" role="navigation">
+    <ul class="nav nav-pills" role="tablist">
+        <li class="nav-item"><a class="nav-link" href="/#yangsheng">影视</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#hongjiu">红酒</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#yangsheng">养生</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#chenxiang">沉香</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#mote">模特</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#contact">联系</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/news_list">文章</a></li>
+    </ul>
+</nav>
+
+<div class="page news-bg">
+    <div class="title">
+        <img class="lazy" data-original="{% static 'main/img/tangbofu_title.png'%}" alt="">
+        <div class="band left blue"></div>
+        <div class="band right blue"></div>
+    </div>
+    <div class="news-block">
+{#        <h3 class="red">近期文章</h3>#}
+        <div class="text-area">
+            <ul>
+                {% if news_list %}
+                    {% for news in news_list %}
+                    <li>
+                        <div class="list-title">
+                            <h3>
+                                <a href="/news_detail/{{news.id}}">{{news.title}}</a>
+                                <span class="date">{{ news.created }}</span>
+                            </h3>
+                        </div>
+                        <p class="desc-text"><a href="/news_detail/{{news.id}}">{{news.desc}}</a></p>
+                    </li>
+                    {% endfor %}
+                {% else %}
+                    <p class="notice">暂无文章...</p>
+                {% endif %}
+
+            </ul>
+            <div id="page-list">
+                {% if page.has_previous %}
+                    <a href="/news_list/{{ page.previous_page_number }}/"><span>上一页</span></a>
+                {% else %}
+                    <span>上一页</span>
+                {% endif %}
+
+                {% for p in pagerange %}
+                    {% ifequal p page.number %}
+                        <span>{{p}}</span>
+                    {% else %}
+                        <a href="/news_list/{{p}}/"><span>{{p}}</span></a>
+                    {% endifequal %}
+                {% endfor %}
+                <span>|</span>
+                {% if page.has_next %}
+                    <a href="/news_list/{{ page.next_page_number }}/"><span>下一页</span></a>
+                {% else %}
+                    <span>下一页</span>
+                {% endif %}
+                <span>第 {{ page.number }} 页</span> <span>共 {{ paginator.num_pages }} 页</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock page_content%}
+
+{% block js %}
+<script>
+
+$(function() {
+
+    $("img.lazy").lazyload({
+        effect : "fadeIn"
+    });
+
+});
+
+
+</script>
+{% endblock js %}
+

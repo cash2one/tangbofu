@@ -1,0 +1,127 @@
+.news-bg {
+  background-color: #f8f8f8;
+}
+.text-area {
+  width: 600px;
+  padding-bottom: 2em;
+  position: relative;
+  height: 100%;
+}
+.notice {
+  color:#666;
+  text-align: center;
+  font-size: 18px;
+  margin: 2em;
+  height: 300px;
+}
+span.date {
+  font-size: 12px;
+  color: #999;
+  //vertical-align: baseline;
+  margin-left: 10px;
+  display: inline;
+}
+.news-block {
+  max-width: 80%;
+  min-width: 600px;
+  margin-left: 10%;
+  margin-right: 10%;
+  min-height: 400px;
+
+  position: relative;
+  border: 1px solid #CCCCCC;
+  background-color: white;
+
+  ul {
+    margin-bottom: 60px;
+    margin-left: 30px;
+
+  }
+
+  li {
+    border-bottom: 1px solid #CCCCCC;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    .list-title {
+        overflow: hidden;
+        word-break: break-all;
+        line-height: 22px;
+        margin-top: 20px;
+    }
+
+    h3 {
+      a {
+        font-size: 18px;
+        text-decoration: none;
+        color: #333333;
+        //vertical-align: top;
+        display: inline;
+      }
+      a:hover {
+        color: #f95346;
+      }
+
+    }
+
+    .desc-text>a {
+      font-size: 14px;
+      color: #999;
+      text-decoration: none;
+    }
+  }
+  li:last-child {
+    border-bottom: 0;
+  }
+}
+.right {
+  display: inline;
+  float: right;
+}
+.article {
+  h3 {
+    text-align: center;
+    font-size: 2em;
+    margin: 2em 0;
+  }
+  padding: 2em 4em;
+}
+#page-list {
+	position: absolute;
+	left: 240px;
+	right: 0px;
+	bottom: 2em;
+	background-color: white;
+	text-align: right;
+	padding: 1em;
+
+	font-size: 0.8em;
+
+	border-top: 1px solid #c1c2c6;
+	border-bottom: 1px solid #c1c2c6;
+}
+#page-list span {
+	padding: 0px 10px;
+	margin: 0px;
+}
+#page-list a {
+	color: #a1865d; /*棕褐色*/
+	text-decoration: underline;
+}
+.bottom-bar {
+  position: relative;
+  background-color: white;
+  text-align: right;
+  padding: 1em;
+  overflow: hidden;
+  font-size: 0.8em;
+
+  border-top: 1px solid #c1c2c6;
+  border-bottom: 1px solid #c1c2c6;
+
+  a {
+    float: right;
+
+    color: #a1865d; /*棕褐色*/
+    text-decoration: underline;
+  }
+}

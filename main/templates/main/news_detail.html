@@ -1,7 +1,53 @@
 {% extends "main/_base.html" %}
+{% load staticfiles %}
 {% block page_content %}
-<h1>news detail</h1>
-<h4>{{news.title}}</h4>
-<b>{{news.desc}}</b>
-<p>{{news.content|safe}}</p>
-{% endblock%}
+
+<nav id="menu" class="navbar navbar-default" role="navigation">
+    <ul class="nav nav-pills" role="tablist">
+        <li class="nav-item"><a class="nav-link" href="/#yangsheng">影视</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#hongjiu">红酒</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#yangsheng">养生</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#chenxiang">沉香</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#mote">模特</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#contact">联系</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/news_list">文章</a></li>
+    </ul>
+</nav>
+
+<div class="page news-bg">
+    <div class="title">
+        <img class="lazy" data-original="{% static 'main/img/tangbofu_title.png'%}" alt="">
+        <div class="band left blue"></div>
+        <div class="band right blue"></div>
+    </div>
+    <div class="news-block">
+        <div class="article">
+
+            <h3><b>{{news.title}}</b><br><span class="date">{{ news.created }}</span></h3>
+            <div class="content">
+                {{news.content|safe}}
+            </div>
+            <div class="bottom-bar">
+                <a href="/news_list/1/"><span>返回</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock page_content%}
+
+{% block js %}
+<script>
+
+$(function() {
+
+    $("img.lazy").lazyload({
+        effect : "fadeIn"
+    });
+
+});
+
+
+</script>
+{% endblock js %}
+

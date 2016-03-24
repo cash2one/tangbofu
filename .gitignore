@@ -1,7 +1,9 @@
 *.pyc
 
 main/data/
-
+main/migrations/
 tangbofu/secret.py
 
 main/static/main/bower_components/
+
+.idea/

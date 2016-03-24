@@ -69,7 +69,7 @@ LANGUAGE_CODE = 'zh-CN'
 DEFAULT_CHARSET = 'utf-8'
 USE_I18N = True
 USE_L10N = True
-USE_TZ = True
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 STATIC_ROOT = BASE_DIR + '/main/static'
