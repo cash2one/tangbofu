@@ -3,7 +3,7 @@
 main/data/
 main/migrations/
 tangbofu/secret.py
-
+main/static/admin
 main/static/main/bower_components/
 
 .idea/
