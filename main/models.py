@@ -8,7 +8,7 @@ import datetime
 class News(models.Model):
     title = models.CharField(max_length=50, default=u"标题", verbose_name=u"文章标题")
     desc = models.CharField(max_length=255, default=u"描述", verbose_name=u"文章描述")
-    img_url = models.CharField(max_length=255, default=u"配图", verbose_name=u"文章配图")
+    #img_url = models.CharField(max_length=255, default=u"配图", verbose_name=u"文章配图")
     content = RichTextUploadingField(verbose_name=u"正文")
     created = models.DateTimeField(auto_now_add=True, verbose_name=u"发布时间")
     modified = models.DateTimeField(auto_now=True, verbose_name=u"修改时间")
