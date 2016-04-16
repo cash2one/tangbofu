@@ -73,7 +73,14 @@
         }
     }
 }
-
+@media (max-width:720px) {
+#menu .nav-link {
+    &:after {
+        content: '';
+    }
+    border-right: 1px solid silver;
+}
+}
 .title {
     margin-top: 40px;
     position: relative;

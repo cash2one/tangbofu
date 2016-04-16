@@ -152,18 +152,6 @@ h4 {
 .news-bg {
   background-color: #f8f8f8; }
 
-.text-area {
-  width: 600px;
-  padding-bottom: 2em;
-  position: relative;
-  height: 100%; }
-
-.end-area {
-  width: 600px;
-  height: 70px;
-  position: absolute;
-  bottom: 0; }
-
 .notice {
   color: #666;
   text-align: center;
@@ -178,17 +166,13 @@ span.date {
   display: inline; }
 
 .news-block {
-  max-width: 80%;
-  min-width: 600px;
-  margin-left: 10%;
-  margin-right: 10%;
   min-height: 400px;
   position: relative;
-  border: 1px solid #CCCCCC;
   background-color: white; }
   .news-block ul {
     margin-bottom: 60px;
-    margin-left: 30px; }
+    margin-left: 30px;
+    margin-right: 30px; }
   .news-block li {
     border-bottom: 1px solid #CCCCCC;
     margin-top: 1em;
@@ -212,6 +196,39 @@ span.date {
   .news-block li:last-child {
     border-bottom: 0; }
 
+.text-area {
+  width: 600px;
+  padding-bottom: 2em;
+  position: relative;
+  height: 100%; }
+
+.end-area {
+  width: 600px;
+  height: 70px;
+  position: absolute;
+  bottom: 0; }
+
+@media (max-width: 720px) {
+  .news-block {
+    width: 100%;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC; }
+
+  .text-area {
+    width: 100%; }
+
+  .end-area {
+    width: 100%; }
+
+  .content img {
+    max-width: 100%; } }
+@media (min-width: 721px) {
+  .news-block {
+    max-width: 80%;
+    min-width: 600px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid #CCCCCC; } }
 .right {
   display: inline;
   float: right; }
@@ -235,6 +252,9 @@ span.date {
   border-top: 1px solid #c1c2c6;
   border-bottom: 1px solid #c1c2c6; }
 
+@media (max-width: 720px) {
+  #page-list {
+    left: 0px; } }
 #page-list span {
   padding: 0px 10px;
   margin: 0px; }
@@ -313,6 +333,11 @@ span.date {
   #menu li:last-child .nav-link:after {
     content: ''; }
 
+@media (max-width: 720px) {
+  #menu .nav-link {
+    border-right: 1px solid silver; }
+    #menu .nav-link:after {
+      content: ''; } }
 .title {
   margin-top: 40px;
   position: relative;
